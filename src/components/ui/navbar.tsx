@@ -1,40 +1,48 @@
+"use client";
+
 import PrimaryLogo from "@/components/ui/logo";
 import Link from "next/link";
 import ThemeSwitch from "./theme-switcher";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   return (
-    <nav className="fixed left-[50%] top-4 md:top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg bg-transparent p-2 text-sm text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-md transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
-      <Link
-        href="/"
-        className="block overflow-hidden text-black hover:text-white hover:stroke-black dark:text-white dark:hover:text-black dark:hover:stroke-white  transition-all duration-300 "
-      >
-        <PrimaryLogo />
-      </Link>
-      <Link
-        href="#"
-        className="block overflow-hidden hover:text-white transition-all duration-300"
-      >
-        <div className="h-[20px]">
-          <span className="flex h-[20px] items-center">Projects</span>
-          <span className="flex h-[20px] items-center text-neutral-50/60 ">
-            Projects
-          </span>
-        </div>
-      </Link>
-      <Link
-        href="/pricing"
-        className="block overflow-hidden hover:text-white transition-all duration-300"
-      >
-        <div className="h-[20px]">
-          <span className="flex h-[20px] items-center">Pricing</span>
-          <span className="flex h-[20px] items-center text-neutral-50/60 ">
-            Pricing
-          </span>
-        </div>
-      </Link>
-      <button
-        className='
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 1 }}
+    >
+      <div className="fixed left-[50%] top-4 md:top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg bg-transparent p-2 pl-4 text-sm text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-md transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
+        <Link
+          href="/"
+          className="block overflow-hidden text-black hover:text-white hover:stroke-black dark:text-white dark:hover:text-black dark:hover:stroke-white  transition-all duration-300 "
+        >
+          <PrimaryLogo />
+        </Link>
+        <Link
+          href="#"
+          className="block overflow-hidden hover:text-white transition-all duration-300"
+        >
+          <div className="h-[20px]">
+            <span className="flex h-[20px] items-center">Projects</span>
+            <span className="flex h-[20px] items-center text-neutral-50/60 ">
+              Projects
+            </span>
+          </div>
+        </Link>
+        <Link
+          href="/pricing"
+          className="block overflow-hidden hover:text-white transition-all duration-300"
+        >
+          <div className="h-[20px]">
+            <span className="flex h-[20px] items-center">Pricing</span>
+            <span className="flex h-[20px] items-center text-neutral-50/60 ">
+              Pricing
+            </span>
+          </div>
+        </Link>
+        <button
+          className='
           relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border-[1px]
           dark:border-neutral-700 px-4 py-1.5 font-medium
          text-black dark:text-neutral-300 transition-all duration-300 bg-white dark:bg-[#121212]
@@ -49,12 +57,13 @@ export default function Navbar() {
           hover:scale-105hover:border-black dark:hover:border-neutral-50 hover:text-white dark:hover:text-neutral-900
           hover:before:translate-y-[0%]
           active:scale-100'
-      >
-        Call us
-      </button>
-      <ThemeSwitch />
-      <div className="-z-40 absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]"></div>
-      <div className="-z-40 absolute inset-0 block size-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-px ![mask-composite:subtract]"></div>
-    </nav>
+        >
+          Call us
+        </button>
+        <ThemeSwitch />
+        <div className="-z-40 absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]"></div>
+        <div className="-z-40 absolute inset-0 block size-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-px ![mask-composite:subtract]"></div>
+      </div>
+    </motion.nav>
   );
 }

@@ -1,3 +1,4 @@
+import CTASection from "@/components/component/cta-section";
 import HeroCardSlideShow from "@/components/component/hero-card-slideshow";
 import Hero from "@/components/ui/hero";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <div className="flex flex-row justify-center items-center">
         <HeroCardSlideShow />
       </div>
+      <CTASection />
     </section>
   );
 }

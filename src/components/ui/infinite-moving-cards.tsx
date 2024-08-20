@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import ShineBorder from "../magicui/shine-border";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface StaticImageData {
   src: string;
@@ -82,12 +83,15 @@ export const InfiniteMovingCards = ({
     }
   };
   return (
-    <div
+    <motion.div
       ref={containerRef}
       className={cn(
         "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 4, delay: 0.2 }}
     >
       <ul
         ref={scrollerRef}
@@ -159,6 +163,6 @@ export const InfiniteMovingCards = ({
           </ShineBorder>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };

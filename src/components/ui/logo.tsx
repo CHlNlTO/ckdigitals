@@ -5,7 +5,7 @@ export default function PrimaryLogo() {
       height="auto"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
-      className="ml-2 fill-neutral-50"
+      className=" fill-neutral-50"
     >
       <title>Algotrimo</title>
       <g>
