@@ -24,6 +24,8 @@ export const InfiniteMovingCards = ({
     description: string;
     image: StaticImageData;
     link: string;
+    light?: string;
+    dark?: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -96,11 +98,12 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <ShineBorder
+            key={idx}
             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-            className="h-[26rem] group relative rounded-lg transition-all flex flex-col shrink-0 flex-grow focus:outline-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-draplin w-full sm:w-[480px] opacity-90 hover:opacity-100 hover:shadow-drap hover:border-draplin/40 dark:hover:border-draplin/40 hover:bg-gray-50/70 dark:hover:bg-[#121212] cursor-pointer overflow-hidden"
+            className="h-[20rem] sm:h-[26rem] group relative rounded-lg transition-all flex flex-col shrink-0 flex-grow focus:outline-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-draplin w-[480px] opacity-90 hover:opacity-100 hover:shadow-drap hover:border-draplin/40 dark:hover:border-draplin/40 hover:bg-gray-50/70 dark:hover:bg-[#121212] cursor-pointer overflow-hidden"
           >
             <Link href={item.link} target="__blank">
-              <div className="relative w-full object-cover object-center transition-opacity overflow-hidden flex flex-col items-center grow h-48 sm:h-full sm:max-h-[280px] p-0 overflow-hidden">
+              <div className="relative w-full object-cover object-center transition-opacity overflow-hidden flex flex-col items-center grow h-48 sm:h-full sm:max-h-[280px] p-0">
                 <div className="w-full z-10 grow">
                   <Image
                     alt="Screenshot of MUI's website"
@@ -108,7 +111,7 @@ export const InfiniteMovingCards = ({
                     height="1502"
                     decoding="async"
                     data-nimg="1"
-                    className="sm:w-auto max-w-full w-full h-full object-contain"
+                    className="max-w-full w-full h-full object-contain"
                     style={{ color: "transparent" }}
                     src={item.image}
                   />
@@ -118,18 +121,25 @@ export const InfiniteMovingCards = ({
               <div className="p-3.5 flex flex-col gap-3 bg-white dark:bg-[#121212]">
                 <div>
                   <div className="flex items-center gap-2">
-                    <div className="h2-medium text-black dark:text-white">
+                    <div className="h2-medium font-bold text-black dark:text-white">
                       {item.title}
                     </div>
-                    <div className="px-1.5 py-1 w-fit rounded-full transition-all focus:outline-none leading-none bg-gray-50 text-gray-800 border border-gray-200 dark:bg-gray-900/30 dark:border-gray-700/50 dark:text-gray-300 text-[0.6875rem] tracking-[0.2px] font-semibold">
-                      React
-                    </div>
                   </div>
-                  <p className="description text-black dark:text-white">
+                  <p className="description text-black dark:text-gray-200/50">
                     {item.description}
                   </p>
                 </div>
-                <div className="group select-none rounded-full transition-all flex items-center justify-center text-[0.8125rem] tracking-[0.2px] leading-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-draplin text-[#9C330C] dark:text-orange-400 font-semibold w-fit p-0">
+                <div
+                  className={`
+                    group select-none rounded-full transition-all
+                    flex items-center justify-center text-[0.8125rem]
+                    tracking-[0.2px] leading-none focus-visible:outline-none
+                    focus-visible:ring-2 focus-visible:ring-draplin
+                    font-semibold w-fit p-0
+                    ${item?.light || ""}
+                    ${item?.dark || ""}
+                  `}
+                >
                   View site
                   <svg
                     viewBox="0 0 20 20"

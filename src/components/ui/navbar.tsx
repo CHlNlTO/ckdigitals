@@ -4,10 +4,10 @@ import ThemeSwitch from "./theme-switcher";
 
 export default function Navbar() {
   return (
-    <nav className="fixed left-[50%] top-4 md:top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg bg-white dark:bg-[#121212] p-2 text-sm text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
+    <nav className="fixed left-[50%] top-4 md:top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg bg-transparent p-2 text-sm text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-md transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
       <Link
         href="/"
-        className="block overflow-hidden hover:text-white transition-all duration-300"
+        className="block overflow-hidden text-black hover:text-white hover:stroke-black dark:text-white dark:hover:text-black dark:hover:stroke-white  transition-all duration-300 "
       >
         <PrimaryLogo />
       </Link>

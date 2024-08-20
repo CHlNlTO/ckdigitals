@@ -12,10 +12,11 @@ export default function ThemeSwitch() {
 
   if (!mounted)
     return (
-      <FiMoon
-        className="text-black dark:text-white mr-2 -ml-2 cursor-pointer"
-        onClick={() => setTheme("light")}
-      />
+      <div></div>
+      // <FiMoon
+      //   className="text-black dark:text-white mr-2 -ml-2 cursor-pointer"
+      //   onClick={() => setTheme("light")}
+      // />
     );
 
   if (resolvedTheme === "dark") {
