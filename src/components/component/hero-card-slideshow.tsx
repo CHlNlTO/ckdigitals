@@ -9,32 +9,36 @@ import { motion } from "framer-motion";
 
 const items = [
   {
-    title: "Snapfolia",
-    description: "A leaf identification app",
+    title: "Leaf Identification App",
+    description:
+      "Interactive and engaging design makes plant identification easy and fun.",
     image: snapfolia,
     link: "https://leaflet-web-app.vercel.app/",
     light: "text-[#0A7A0A]",
     dark: "dark:text-green-400",
   },
   {
-    title: "Townplace Steel and Aluminum",
-    description: "A steel and aluminum company website",
+    title: "Steel and Aluminum Supplier",
+    description:
+      "Clear product displays and simple navigation help users find what they need quickly.",
     image: townplace,
     link: "https://townplace-steel-and-aluminum.vercel.app/",
     light: "text-[#9C330C]",
     dark: "dark:text-orange-400",
   },
   {
-    title: "Synergreens",
-    description: "A health and wellness company",
+    title: "Health and Wellness Platform",
+    description:
+      "Clean layout and intuitive design present wellness info clearly and attractively.",
     image: synergreens,
     link: "https://synergreens-deo-abutal.vercel.app/",
     light: "text-[#0A7A0A]",
     dark: "dark:text-green-400",
   },
   {
-    title: "Construction, Inc.",
-    description: "A resourceful construction company",
+    title: "Construction Services",
+    description:
+      "High-quality images and detailed project showcases highlight expertise effectively.",
     image: websiteTemplate1,
     link: "https://website-template-1-gamma.vercel.app/",
     light: "text-[#2e0b7e]",

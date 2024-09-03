@@ -129,7 +129,7 @@ export const InfiniteMovingCards = ({
                       {item.title}
                     </div>
                   </div>
-                  <p className="description text-black dark:text-gray-200/50">
+                  <p className="description text-black dark:text-gray-200/50 text-xs">
                     {item.description}
                   </p>
                 </div>

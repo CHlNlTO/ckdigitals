@@ -4,6 +4,7 @@ import Image from "next/image";
 import adminPanel from "@/assets/admin-panel2.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import RightArrow from "../ui/right-arrow";
 
 export default function CTASection() {
   return (
@@ -11,7 +12,7 @@ export default function CTASection() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 2, delay: 0.2 }}
-      className="relative isolate overflow-hidden bg-[#121212] px-6 mt-10 md:mt-40 pt-20 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 w-full max-w-7xl"
+      className="relative isolate overflow-hidden bg-white dark:bg-[#121212] px-6 mt-10 md:mt-40 pt-20 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 w-full max-w-7xl"
     >
       <svg
         viewBox="0 0 1024 1024"
@@ -33,27 +34,28 @@ export default function CTASection() {
         </defs>
       </svg>
       <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
           Expand your reach.
           <br />
           Boost your sales.
         </h2>
-        <p className="mt-6 text-lg leading-8 text-gray-300">
+        <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-300">
           Deploy your business online and reach more clients. Start at a low
           cost and grow your business with us.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
           <Link
+            className="inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 rounded-xl text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 dark:bg-white dark:text-black hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50"
             href="/pricing"
-            className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Contact us
+            Contact Us
+            <RightArrow />
           </Link>
           <Link
             href="/pricing"
-            className="text-sm font-semibold leading-6 text-white"
+            className="text-sm font-semibold leading-6 text-black dark:text-white w-full flex flex-row items-center justify-center gap-2 transition-all duration-150 ease-in-out "
           >
-            Request a demo <span aria-hidden="true">→</span>
+            Request a demo <RightArrow />
           </Link>
         </div>
       </div>

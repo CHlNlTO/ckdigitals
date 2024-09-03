@@ -28,7 +28,7 @@ export default function Hero() {
                       className="shrink-0 bg-border w-px mx-2 h-4"
                     ></div>
                     <span className="animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent inline">
-                      Don&apos;t miss our 20% sale, Grab now!
+                      Don&apos;t miss our 50% sale, Grab now!
                     </span>
                   </div>
                 </Link>
