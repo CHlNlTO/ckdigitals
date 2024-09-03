@@ -20,8 +20,8 @@ export default function Navbar() {
           <PrimaryLogo />
         </Link>
         <Link
-          href="#"
-          className="block overflow-hidden hover:text-white transition-all duration-300"
+          href="#projects"
+          className="block overflow-hidden text-zinc-500 hover:text-black dark:text-neutral-50/60 dark:hover:text-white transition-all duration-300"
         >
           <div className="h-[20px]">
             <span className="flex h-[20px] items-center">Projects</span>
@@ -32,7 +32,7 @@ export default function Navbar() {
         </Link>
         <Link
           href="/pricing"
-          className="block overflow-hidden hover:text-white transition-all duration-300"
+          className="block overflow-hidden text-zinc-500 hover:text-black dark:text-neutral-50/60 dark:hover:text-white transition-all duration-300"
         >
           <div className="h-[20px]">
             <span className="flex h-[20px] items-center">Pricing</span>
@@ -41,7 +41,8 @@ export default function Navbar() {
             </span>
           </div>
         </Link>
-        <button
+        <Link
+          href="#contact"
           className='
           relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border-[1px]
           dark:border-neutral-700 px-4 py-1.5 font-medium
@@ -59,7 +60,7 @@ export default function Navbar() {
           active:scale-100'
         >
           Call us
-        </button>
+        </Link>
         <ThemeSwitch />
         <div className="-z-40 absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]"></div>
         <div className="-z-40 absolute inset-0 block size-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-px ![mask-composite:subtract]"></div>

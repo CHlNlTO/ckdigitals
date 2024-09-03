@@ -2,7 +2,7 @@
 import * as React from "react";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { RxCross2 } from "react-icons/rx";
+import RightArrow from "../../components/ui/right-arrow";
 
 interface IconProps {
   className?: string;
@@ -35,7 +35,7 @@ export default function Pricing() {
             <div className="flex flex-col p-12 gap-16 lg:gap-20 w-full max-w-sm bg-white dark:bg-black shadow-lg rounded-lg dark:bg-zinc-850 border border-zinc-700 z-20">
               <div className="flex flex-col gap-12">
                 <div className="flex flex-col gap-1">
-                  <h3 className="text-xl font-bold text-start text-black dark:text-white flex flex-row justify-between">
+                  <h3 className="text-xl font-bold text-start text-black dark:text-white flex flex-row justify-between items-end">
                     <div className="text-sm text-start text-zinc-700 dark:text-zinc-400">
                       <span className="font-bold line-through">₱2996</span>
                     </div>
@@ -52,7 +52,7 @@ export default function Pricing() {
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
                     <p className="text-black dark:text-zinc-400 text-xs">
-                      Free website template of your own choice
+                      Free web template design of your own choice
                     </p>
                   </li>
                   <li className="flex items-center">
@@ -64,35 +64,21 @@ export default function Pricing() {
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
                     <p className="text-black dark:text-zinc-400 text-xs">
-                      Inquiries sent to your email
+                      Customer inquiries directly sent to your email
                     </p>
                   </li>
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
                     <p className="text-black dark:text-zinc-400 text-xs">
-                      Basic tools to improve Google search visibility
-                    </p>
-                  </li>
-                  <li className="flex items-center">
-                    <RxCross2 className="w-4 h-4 text-white dark:text-white bg-black dark:bg-red-500 rounded-full mr-2 p-1" />
-                    <p className="text-black dark:text-zinc-400 text-xs">
-                      Choose your URL{" "}
-                      <span className="text-[10px]">
-                        (www.yourwebsitename.com)
-                      </span>
-                    </p>
-                  </li>
-                  <li className="flex items-center">
-                    <RxCross2 className="w-4 h-4 text-white dark:text-white bg-black dark:bg-red-500 rounded-full mr-2 p-1" />
-                    <p className="text-black dark:text-zinc-400 text-xs">
-                      Chatbot Integration
+                      Basic tools to improve Google Search visibility
                     </p>
                   </li>
                 </ul>
               </div>
               <div className="mt-6">
-                <Button className="w-full border bg-white dark:bg-black border-black rounded-md text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black">
-                  Get Started &rarr;
+                <Button className="inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-white dark:bg-black text-black dark:text-white dark:hover:bg-zinc-900 border-black dark:border-white shadow-sm hover:bg-accent hover:text-accent-foreground h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 overflow-hidden rounded-xl text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-white dark:hover:ring-offset-black">
+                  Continue
+                  <RightArrow />
                 </Button>
               </div>
             </div>
@@ -121,7 +107,7 @@ export default function Pricing() {
                   </div>
                   <div className="flex flex-col gap-12 relative">
                     <div className="flex flex-col gap-1">
-                      <h3 className="text-xl font-bold text-start text-black dark:text-white flex flex-row justify-between">
+                      <h3 className="text-xl font-bold text-start text-black dark:text-white flex flex-row justify-between items-end">
                         <div className="text-sm text-start text-zinc-700 dark:text-zinc-400">
                           <span className="font-bold line-through">₱4896</span>
                         </div>
@@ -136,49 +122,50 @@ export default function Pricing() {
                     </div>
                     <ul className="space-y-3 h-[150px]">
                       <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-green-500 rounded-full mr-2 p-1" />
+                        <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
                         <p className="text-black dark:text-zinc-400 text-xs">
-                          Choose your URL{" "}
+                          Add a Chatbot for customer inquiries
+                        </p>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
+                        <p className="text-black dark:text-zinc-400 text-xs">
+                          Get a custom web address{" "}
                           <span className="text-[10px]">
-                            (www.yourwebsitename.com)
+                            (www.yourbusiness.com)
                           </span>
                         </p>
                       </li>
                       <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-green-500 rounded-full mr-2 p-1" />
+                        <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
                         <p className="text-black dark:text-zinc-400 text-xs">
-                          Chatbot Integration
+                          Add a Google Map for easy directions
                         </p>
                       </li>
                       <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
                         <p className="text-black dark:text-zinc-400 text-xs">
-                          Web Analytics Report
+                          Connect your business to Google for better visibility
                         </p>
                       </li>
                       <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
                         <p className="text-black dark:text-zinc-400 text-xs">
-                          Google Business Profile Setup
+                          Advance tools to improve Google Search visibility
                         </p>
                       </li>
                       <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
                         <p className="text-black dark:text-zinc-400 text-xs">
-                          Google Maps Integration
-                        </p>
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
-                        <p className="text-black dark:text-zinc-400 text-xs">
-                          Advanced Search Engine Tools
+                          Track users activity on your website
                         </p>
                       </li>
                     </ul>
                   </div>
                   <div className="mt-6">
-                    <Button className="w-full border rounded-md bg-black hover:border-black dark:bg-white text-white hover:bg-white hover:text-black dark:border-black dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white">
-                      Upgrade Now &rarr;
+                    <Button className="inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 rounded-xl text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 dark:bg-white dark:text-black hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50">
+                      Continue
+                      <RightArrow />
                     </Button>
                   </div>
                 </div>
@@ -187,13 +174,13 @@ export default function Pricing() {
             <div className="flex flex-col p-12 gap-16 lg:gap-20 w-full max-w-sm bg-white dark:bg-black shadow-lg rounded-lg dark:bg-zinc-850 border border-zinc-700 z-20">
               <div className="flex flex-col gap-12">
                 <div className="flex flex-col gap-1">
-                  <div className="flex flex-row items-end gap-1">
-                    <h3 className="text-xl font-bold text-start text-black dark:text-white">
-                      Custom
-                    </h3>
+                  <div className="flex flex-row justify-between items-end gap-1">
                     <h1 className="text-sm text-start text-black dark:text-zinc-400 pb-[3px]">
                       starts at
                     </h1>
+                    <h3 className="text-xl font-bold text-start text-black dark:text-white">
+                      Custom
+                    </h3>
                   </div>
                   <div className="text-start text-black dark:text-white">
                     <span className="text-4xl font-bold">₱49,298</span>
@@ -205,45 +192,46 @@ export default function Pricing() {
                 <ul className="space-y-3 h-[150px]">
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
-                    <p className="text-black dark:text-zinc-400 text-sm">
+                    <p className="text-black dark:text-zinc-400 text-xs">
                       Custom website
                     </p>
                   </li>
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
-                    <p className="text-black dark:text-zinc-400 text-sm">
+                    <p className="text-black dark:text-zinc-400 text-xs">
                       Unlimited Revisions
                     </p>
                   </li>
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
-                    <p className="text-black dark:text-zinc-400 text-sm">
+                    <p className="text-black dark:text-zinc-400 text-xs">
                       Tailored Features
                     </p>
                   </li>
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
-                    <p className="text-black dark:text-zinc-400 text-sm">
+                    <p className="text-black dark:text-zinc-400 text-xs">
                       Design + Development
                     </p>
                   </li>
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
-                    <p className="text-black dark:text-zinc-400 text-sm">
+                    <p className="text-black dark:text-zinc-400 text-xs">
                       Database Allocation
                     </p>
                   </li>
                   <li className="flex items-center">
                     <CheckIcon className="w-4 h-4 text-white dark:text-black bg-black dark:bg-white rounded-full mr-2 p-1" />
-                    <p className="text-black dark:text-zinc-400 text-sm">
+                    <p className="text-black dark:text-zinc-400 text-xs">
                       API Integration
                     </p>
                   </li>
                 </ul>
               </div>
               <div className="mt-6">
-                <Button className="w-full border bg-white dark:bg-black border-black rounded-md text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black">
-                  Contact Sales &rarr;
+                <Button className="inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-white dark:bg-black text-black dark:text-white dark:hover:bg-zinc-900 border-black dark:border-white shadow-sm hover:bg-accent hover:text-accent-foreground h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 overflow-hidden rounded-xl text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-white dark:hover:ring-offset-black">
+                  Continue
+                  <RightArrow />
                 </Button>
               </div>
             </div>

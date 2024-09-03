@@ -53,7 +53,7 @@ export default function CTASection() {
           </Link>
           <Link
             href="/pricing"
-            className="text-sm font-semibold leading-6 text-black dark:text-white w-full flex flex-row items-center justify-center gap-2 transition-all duration-150 ease-in-out "
+            className="text-sm font-semibold leading-6 text-black dark:text-white w-full flex flex-row items-center justify-center gap-2 tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-[.1px] hover:ring-black hover:ring-offset-2 p-2 hover:ring-offset-current dark:hover:ring-neutral-50 rounded-xl"
           >
             Request a demo <RightArrow />
           </Link>
