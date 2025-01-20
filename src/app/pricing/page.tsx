@@ -259,8 +259,8 @@ function CheckIcon(props: IconProps) {
 }
 
 // Alternative Pricing Card Design
-{
-  /* <div className="grid grid-cols-1 gap-4 mt-5 max-w-7xl mx-auto md:grid-cols-2 xl:grid-cols-3">
+
+/* <div className="grid grid-cols-1 gap-4 mt-5 max-w-7xl mx-auto md:grid-cols-2 xl:grid-cols-3">
           <div className="p-1 sm:p-4 md:p-4 rounded-3xl bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800">
             <div className="flex flex-col gap-4 h-full justify-start">
               <div className="p-4 bg-white dark:bg-neutral-800 rounded-2xl shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
@@ -769,4 +769,3 @@ function CheckIcon(props: IconProps) {
             </div>
           </div>
         </div> */
-}

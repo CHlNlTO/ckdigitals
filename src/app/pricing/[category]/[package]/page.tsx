@@ -121,7 +121,7 @@ export default function PackageDetails({
         </h2>
         <p className="text-gray-600 mt-2">
           Fill out the form below to inquire about the <strong>{name}</strong>{" "}
-          package. We'll get back to you as soon as possible.
+          package. We&apos;ll get back to you as soon as possible.
         </p>
         <div className="mt-6">
           <ContactForm packageName={name} />
