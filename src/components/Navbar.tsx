@@ -10,7 +10,8 @@ export default function Navbar() {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 1 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="fixed left-0 top-0 w-full z-50 bg-white dark:bg-[#121212] shadow-md dark:shadow-lg"
     >
       <div className="fixed left-[50%] top-4 md:top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg bg-white/80 dark:bg-[#121212]/80 p-2 pl-4 text-sm text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
         <Link

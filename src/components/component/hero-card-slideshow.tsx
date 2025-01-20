@@ -47,7 +47,7 @@ const items = [
   },
   {
     title: "Desgy",
-    description: "A design agency for a digital products.",
+    description: "A design agency for digital products.",
     image: desgy,
     link: "https://desgy.vercel.app",
     light: "text-[#0066ff]",
