@@ -39,22 +39,6 @@ export function ContactForm() {
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="juandelacruz@gmail.com" type="email" />
         </LabelInputContainer>
-        <div className="mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">Name</Label>
-            <Input id="firstname" placeholder="Juan Dela Cruz" type="text" />
-          </LabelInputContainer>
-        </div>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="subject">Subject</Label>
-            <Input
-              id="subject"
-              placeholder="An inquiry about your service"
-              type="text"
-            />
-          </LabelInputContainer>
-        </div>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="message">Message</Label>
@@ -74,7 +58,7 @@ export function ContactForm() {
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
-        <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+        <p className="text-neutral-600 text-sm max-w-md mt-2 dark:text-neutral-300">
           Also, feel free to get in touch with us using the platforms below.
         </p>
 

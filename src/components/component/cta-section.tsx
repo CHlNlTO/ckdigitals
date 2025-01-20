@@ -12,7 +12,7 @@ export default function CTASection() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 2, delay: 0.2 }}
-      className="relative isolate overflow-hidden bg-white dark:bg-[#121212] px-6 mt-10 md:mt-40 pt-20 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 w-full max-w-7xl"
+      className="relative isolate overflow-hidden rounded-lg bg-white dark:bg-[#121212] px-6 mt-10 md:mt-40 pt-20 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 w-full max-w-7xl"
     >
       <svg
         viewBox="0 0 1024 1024"
@@ -28,8 +28,8 @@ export default function CTASection() {
         />
         <defs>
           <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-            <stop stopColor="#7775D6" />
-            <stop offset={1} stopColor="#E935C1" />
+            <stop stopColor="#4affff" />
+            <stop offset={1} stopColor="#1143e7" />
           </radialGradient>
         </defs>
       </svg>
@@ -45,7 +45,7 @@ export default function CTASection() {
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
           <Link
-            className="inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 rounded-xl text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 dark:bg-white dark:text-black hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50"
+            className="inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-b from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 rounded-xl text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 dark:bg-white dark:text-white hover:ring-blue-500 hover:ring-offset-2 hover:dark:ring-offset-zinc-900 dark:hover:ring-blue-500"
             href="/pricing"
           >
             Contact Us
@@ -53,7 +53,7 @@ export default function CTASection() {
           </Link>
           <Link
             href="/pricing"
-            className="text-sm font-semibold leading-6 text-black dark:text-white w-full flex flex-row items-center justify-center gap-2 tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-[.1px] hover:ring-black hover:ring-offset-2 p-2 hover:ring-offset-current dark:hover:ring-neutral-50 rounded-xl"
+            className="inline-flex items-center justify-center bg-white dark:bg-[#121212] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 overflow-hidden rounded-xl text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 text-blue-700 dark:text-white hover:ring-blue-500 hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-white dark:hover:ring-offset-black"
           >
             Request a demo <RightArrow />
           </Link>
