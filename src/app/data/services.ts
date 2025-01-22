@@ -13,7 +13,7 @@ export const services = [
         maxPrice: 25000,
         features: [
           "5 custom-designed web pages",
-          "Domain and hosting setup (billed separately)",
+          "Domain and hosting setup",
           "Customer inquiries directly sent to your email",
           "Social media links and integration",
           "2 comprehensive revision cycles",
@@ -60,8 +60,8 @@ export const services = [
         originalPrice: 13333,
         maxPrice: 20000,
         features: [
-          "Shopify Website Theme (billed separately)",
-          "Domain and hosting setup (billed separately)",
+          "Shopify Website Theme",
+          "Domain and hosting setup",
           "Product Catalog",
           "Shopping Cart",
           "Payment Gateway",

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Moon } from "lucide-react";
+import ThemeSwitch from "./ui/theme-switcher";
 
 const footerConfig = {
   companyInfo: {
@@ -39,9 +40,21 @@ const footerConfig = {
   socials: {
     title: "Socials",
     links: [
-      { name: "Facebook", icon: Facebook, href: "#" },
-      { name: "Instagram", icon: Instagram, href: "#" },
-      { name: "LinkedIn", icon: Linkedin, href: "#" },
+      {
+        name: "Facebook",
+        icon: Facebook,
+        href: "https://www.facebook.com/itswaynetoomuch",
+      },
+      {
+        name: "Instagram",
+        icon: Instagram,
+        href: "https://www.instagram.com/itswaynetoomuch",
+      },
+      {
+        name: "LinkedIn",
+        icon: Linkedin,
+        href: "https://www.linkedin.com/in/clark-wayne-abutal-1005001aa",
+      },
     ],
   },
   legal: {
@@ -64,7 +77,7 @@ const FooterColumn = ({
   }[];
 }) => (
   <div>
-    <h3 className="text-lg font-semibold text-blue-800 mb-6">{title}</h3>
+    <h3 className="text-lg font-semibold text-blue-500 mb-6">{title}</h3>
     <ul className="space-y-4">
       {links.map((link) => (
         <li key={link.name}>
@@ -124,7 +137,7 @@ const Footer = () => {
 
           {/* Column 4 - Socials */}
           <div>
-            <h3 className="text-lg font-semibold text-blue-800 mb-6">
+            <h3 className="text-lg font-semibold text-blue-500 mb-6">
               {socials.title}
             </h3>
             <div className="flex space-x-4">
@@ -142,7 +155,9 @@ const Footer = () => {
                 className="text-gray-400 hover:text-gray-500"
                 aria-label="Toggle theme"
               >
-                <Moon className="h-6 w-6" />
+                <div className="ml-2">
+                  <ThemeSwitch />
+                </div>
               </button>
             </div>
           </div>
