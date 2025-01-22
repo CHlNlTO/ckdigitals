@@ -20,7 +20,7 @@ export default function Home() {
       </section>
       <section
         id="tetimonials"
-        className="flex flex-row justify-center items-center w-full mb-52"
+        className="flex flex-row justify-center items-center w-full mb-48"
       >
         <Testimonials />
       </section>

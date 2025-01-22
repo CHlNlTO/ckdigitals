@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="fixed left-[50%] top-4 md:top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg bg-white/80 dark:bg-[#121212]/80 p-2 pl-4 text-sm text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
         <Link
           href="/"
-          className="block overflow-hidden text-black hover:text-white hover:stroke-black dark:text-white dark:hover:text-black dark:hover:stroke-white  transition-all duration-300 "
+          className="block overflow-hidden text-black hover:text-white hover:stroke-black dark:text-white dark:hover:text-black dark:hover:stroke-white  transition-all duration-300 py-1.5"
         >
           <PrimaryLogo />
         </Link>
@@ -43,6 +43,17 @@ export default function Navbar() {
           </div>
         </Link>
         <Link
+          href="/contact"
+          className="block overflow-hidden text-zinc-500 hover:text-black dark:text-neutral-50/60 dark:hover:text-white transition-all duration-300"
+        >
+          <div className="h-[20px]">
+            <span className="flex h-[20px] items-center">Contact</span>
+            <span className="flex h-[20px] items-center text-neutral-50/60 ">
+              Contact
+            </span>
+          </div>
+        </Link>
+        {/* <Link
           href="#contact"
           className='
           relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border-[1px]
@@ -61,7 +72,7 @@ export default function Navbar() {
           active:scale-100'
         >
           Call us
-        </Link>
+        </Link> */}
         <ThemeSwitch />
         <div className="-z-40 absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]"></div>
         <div className="-z-40 absolute inset-0 block size-full animate-gradient bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-px ![mask-composite:subtract]"></div>

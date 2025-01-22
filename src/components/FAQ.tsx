@@ -75,8 +75,8 @@ export const FAQs = () => (
             </h4>
             <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
               Get answers to common questions about our web development
-              services, pricing, and support options. We're here to help make
-              your digital journey smooth and successful.
+              services, pricing, and support options. We&apos;re here to help
+              make your digital journey smooth and successful.
             </p>
           </div>
           <div>
