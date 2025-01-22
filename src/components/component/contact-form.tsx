@@ -12,6 +12,10 @@ import {
   IconPhone,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { useState } from "react";
+import { submitContactForm } from "@/app/actions/contact";
+import { useToast } from "@/hooks/use-toast";
+import { ContactFormData } from "@/lib/types";
 
 const email = "mailto:clark.wayne023@gmail.com";
 const phone = "tel:09177212114";
@@ -20,10 +24,48 @@ const instagram = "https://www.instagram.com/itswaynetoomuch";
 const tiktok = "https://www.tiktok.com";
 
 export function ContactForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    setLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data: ContactFormData = {
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
+    };
+
+    console.log("FormData:", data);
+
+    try {
+      const result = await submitContactForm(data);
+
+      if (result.success) {
+        toast({
+          title: "Success",
+          description: "Your message has been sent successfully!",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        toast({
+          title: "Error",
+          description: result.message,
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <div className="max-w-2xl w-full mx-4 md:mx-auto rounded-xl sm:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-[#121212] border">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
@@ -37,7 +79,12 @@ export function ContactForm() {
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="juandelacruz@gmail.com" type="email" />
+          <Input
+            id="email"
+            placeholder="juandelacruz@gmail.com"
+            type="email"
+            name="email"
+          />
         </LabelInputContainer>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
@@ -45,14 +92,19 @@ export function ContactForm() {
             <Textarea
               id="message"
               placeholder="I would like to avail your service. How do I get started?"
+              name="message"
             />
           </LabelInputContainer>
         </div>
         <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-gray-900 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className={cn(
+            "bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-gray-900 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]",
+            loading && "opacity-50 cursor-not-allowed"
+          )}
           type="submit"
+          disabled={loading}
         >
-          Submit &rarr;
+          {loading ? "Sending..." : "Submit"} &rarr;
           <BottomGradient />
         </button>
 
