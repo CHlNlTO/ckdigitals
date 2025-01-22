@@ -1,6 +1,7 @@
 import { ContactForm } from "@/components/component/contact-form";
 import CTASection from "@/components/component/cta-section";
 import HeroCardSlideShow from "@/components/component/hero-card-slideshow";
+import { FAQs } from "@/components/FAQ";
 import { Testimonials } from "@/components/Testimonials";
 import Hero from "@/components/ui/hero";
 
@@ -22,6 +23,12 @@ export default function Home() {
         className="flex flex-row justify-center items-center w-full mb-52"
       >
         <Testimonials />
+      </section>
+      <section
+        id="faqs"
+        className="flex flex-row justify-center items-center w-full mb-36"
+      >
+        <FAQs />
       </section>
       <section
         id="contact"
