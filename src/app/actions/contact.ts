@@ -1,7 +1,7 @@
 "use server";
 
 import { z } from "zod";
-import { ContactFormData } from "../api/contact/types";
+import { ContactFormData } from "@/lib/types";
 import { sendEmail } from "@/lib/email";
 
 const contactSchema = z.object({
