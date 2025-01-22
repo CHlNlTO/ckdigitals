@@ -46,13 +46,14 @@ export function ContactForm() {
         toast({
           title: "Success",
           description: "Your message has been sent successfully!",
+          className:
+            "group border-green-500 bg-green-500 text-zinc-50 dark:border-green-900 dark:bg-green-900 dark:text-zinc-50",
         });
         (e.target as HTMLFormElement).reset();
       } else {
         toast({
           title: "Error",
           description: result.message,
-          variant: "destructive",
         });
       }
     } catch (error) {
