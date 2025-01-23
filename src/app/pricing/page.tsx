@@ -3,6 +3,7 @@
 import * as React from "react";
 import { services } from "@/app/data/services";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface IconProps {
   className?: string;
@@ -56,17 +57,28 @@ export default function Pricing() {
                                 {pkg.name}
                               </p>
                             </div>
-                            {pkg.featured && (
-                              <div className="font-medium text-xs px-3 py-1 rounded-full relative bg-neutral-900 dark:bg-white dark:text-black text-white">
-                                <div className="absolute inset-x-0 bottom-0 w-3/4 mx-auto h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-                                Featured
-                              </div>
-                            )}
+                            {/* {pkg.featured && ( */}
+                            <div className="font-medium text-xs px-3 py-1 rounded-full relative bg-gradient-to-b from-blue-500 to-blue-700  text-white">
+                              <div className="absolute inset-x-0 bottom-0 w-3/4 mx-auto h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+                              <p className="text-xs line-through">
+                                from ₱{pkg.originalPrice}
+                              </p>
+                            </div>
+                            {/* )} */}
+                          </div>
+                          <div className="flex flex-row flex-wrap gap-1 justify-end items-center">
+                            <p className="text-xs text-gray-600 dark:text-gray-400">
+                              Enjoy our 25% discount!
+                            </p>
+                            {/* <p className="text-sm text-gray-600 dark:text-gray-400 line-through">
+                              ₱{pkg.originalPrice}
+                            </p> */}
                           </div>
                           <div className="mt-8">
                             <div className="flex items-end">
-                              <span className="text-lg font-bold text-neutral-500 dark:text-neutral-200">
-                                {service.category === "Company Internal Systems"
+                              <span className="text-md font-bold text-neutral-500 dark:text-neutral-200">
+                                {service.category ===
+                                "Business Internal Systems"
                                   ? "starts at"
                                   : "₱"}
                               </span>
@@ -84,9 +96,17 @@ export default function Pricing() {
                               </span>
                             </div>
                           </div>
-                          <button className="px-4 py-2 rounded-md button bg-white text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] w-full mt-10">
-                            Get Started
-                          </button>
+                          <Link
+                            href={`/pricing/${service.category
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}/${pkg.name
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`}
+                          >
+                            <button className="inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-b from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 rounded-lg text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 dark:bg-white dark:text-white hover:ring-blue-500 hover:ring-offset-2 hover:dark:ring-offset-zinc-900 dark:hover:ring-blue-500 mt-10">
+                              Get Started
+                            </button>
+                          </Link>
                         </div>
 
                         <div className="mt-1 p-4">
@@ -237,7 +257,7 @@ export default function Pricing() {
         </div>
       </div>
       <div
-        className="absolute top-0 left-1/2 w-[2000px] h-[2000px] bg-blue-500 rounded-full blur-xl opacity-30 -z-10 overflow-hidden"
+        className="absolute top-0 left-1/2 w-[1800px] h-[1800px] bg-blue-500 rounded-full blur-xl opacity-30 -z-10 overflow-hidden"
         style={{
           transform: "translateX(-50%) translateY(-50%)",
           maskImage:

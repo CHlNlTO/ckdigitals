@@ -9,8 +9,8 @@ export const services = [
       {
         name: "Standard Package",
         price: 29998,
-        originalPrice: 20000,
-        maxPrice: 25000,
+        originalPrice: 39998,
+        maxPrice: 59998,
         features: [
           "5 custom-designed web pages",
           "Domain and hosting setup",
@@ -26,8 +26,8 @@ export const services = [
       {
         name: "Premium Package",
         price: 44998,
-        originalPrice: 40000,
-        maxPrice: 50000,
+        originalPrice: 59998,
+        maxPrice: 79998,
         features: [
           "10 professionally designed web pages",
           "AI chatbot for customer inquiry support",
@@ -57,8 +57,8 @@ export const services = [
       {
         name: "Standard Package",
         price: 59998,
-        originalPrice: 13333,
-        maxPrice: 20000,
+        originalPrice: 79998,
+        maxPrice: 159998,
         features: [
           "Shopify Website Theme",
           "Domain and hosting setup",
@@ -74,8 +74,8 @@ export const services = [
       {
         name: "Premium Package",
         price: 74998,
-        originalPrice: 33333,
-        maxPrice: 50000,
+        originalPrice: 99998,
+        maxPrice: 179998,
         features: [
           "Custom Website Theme Design",
           "API Integrations",
@@ -102,8 +102,8 @@ export const services = [
       {
         name: "Standard Applications",
         price: 60999,
-        originalPrice: 80000,
-        maxPrice: 100000,
+        originalPrice: 81332,
+        maxPrice: 99998,
         features: [
           "CRUD Operations",
           "User Management",
@@ -118,8 +118,8 @@ export const services = [
       {
         name: "Premium Applications",
         price: 118999,
-        originalPrice: 133333,
-        maxPrice: 200000,
+        originalPrice: 158665,
+        maxPrice: 199998,
         features: [
           "Custom Dashboards",
           "Workflow Automation",
@@ -138,7 +138,7 @@ export const services = [
       {
         name: "Enterprise Applications",
         price: 206499,
-        originalPrice: 266666,
+        originalPrice: 275332,
         features: [
           "Multi-Module System",
           "ERP/CRM Features",
@@ -162,8 +162,8 @@ export const services = [
       {
         name: "Monthly Retainer",
         price: 2999,
-        originalPrice: 2000,
-        maxPrice: 2500,
+        originalPrice: 3999,
+        maxPrice: 4999,
         features: [
           "Regular Updates",
           "Security Patches",

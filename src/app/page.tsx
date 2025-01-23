@@ -1,3 +1,4 @@
+import Comparison from "@/components/Comparison";
 import { ContactForm } from "@/components/component/contact-form";
 import CTASection from "@/components/component/cta-section";
 import HeroCardSlideShow from "@/components/component/hero-card-slideshow";
@@ -17,6 +18,12 @@ export default function Home() {
       </section>
       <section className="flex flex-row justify-center items-center w-full mb-52">
         <CTASection />
+      </section>
+      <section
+        id="comparison"
+        className="flex flex-row justify-center items-center w-full mb-48"
+      >
+        <Comparison />
       </section>
       <section
         id="tetimonials"

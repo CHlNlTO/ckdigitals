@@ -9,11 +9,11 @@ export default function Contact() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="my-40"
+      className="py-40"
     >
       <ContactForm />
       <div
-        className="absolute top-0 left-1/2 w-[2000px] h-[2000px] bg-blue-500 rounded-full blur-xl opacity-30 -z-10 overflow-hidden"
+        className="absolute top-0 left-1/2 w-[1800px] h-[1800px] bg-blue-500 rounded-full blur-xl opacity-30 -z-10 overflow-x-hidden"
         style={{
           transform: "translateX(-50%) translateY(-50%)",
           maskImage:
