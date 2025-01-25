@@ -4,11 +4,16 @@ import Link from "next/link";
 import WordRotate from "../magicui/word-rotate";
 import RightArrow from "./right-arrow";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import hero from "@/assets/balfour.png";
+import { MoveRight, PhoneCall } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function Hero() {
   return (
     <section id="hero">
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -16,7 +21,7 @@ export default function Hero() {
         <div className="relative h-full overflow-hidden pt-20 md:pt-14 z-40">
           <div className="z-10 flex flex-col">
             <div className="mt-10 grid grid-cols-1 md:mt-20">
-              <div className="flex flex-col items-center gap-6 px-7 pb-8 text-center md:items-center md:px-10">
+              <div className="flex flex-col items-center gap-6 px-4 pb-8 text-center md:items-center md:px-10">
                 <Link href="/pricing">
                   <div className="group relative mx-auto flex max-w-fit flex-row items-center justify-center rounded-2xl bg-white/40 px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f] dark:bg-black/40">
                     <div className="absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]"></div>
@@ -33,20 +38,31 @@ export default function Hero() {
                   </div>
                 </Link>
                 <div className="relative flex flex-col gap-4 md:items-center lg:flex-row">
-                  <h1 className="text-black dark:text-white relative mx-0 max-w-[43.5rem] pt-5 md:mx-auto md:px-4 md:py-2 text-left tracking-tighter text-balance md:text-center font-semibold md:text-7xl lg:text-7xl sm:text-7xl text-5xl">
-                    Make your business known by
-                    <WordRotate
-                      className="text-blue-600 dark:text-blue-500 relative text-left tracking-tighter text-balance md:text-center font-semibold md:text-7xl pb-3 lg:text-7xl sm:text-7xl text-5xl"
-                      words={[
-                        "everyone",
-                        "clients",
-                        "customers",
-                        "people",
-                        "the world",
-                        "communities",
-                      ]}
-                    />
+                  <h1 className="text-black dark:text-white relative mx-0 max-w-[43.5rem] pt-5 md:mx-auto md:px-4 md:py-2 text-left tracking-tighter text-balance  font-semibold md:text-7xl lg:text-7xl sm:text-7xl text-4xl">
+                    Make your business <br /> tech-driven and
+                    <span className="inline-flex gap-2">
+                      10x more
+                      <WordRotate
+                        className="text-blue-600 dark:text-blue-500 relative text-left tracking-tighter text-balance  font-semibold md:text-7xl pb-3 lg:text-7xl sm:text-7xl text-4xl"
+                        words={[
+                          "efficient",
+                          "impactful",
+                          "faster",
+                          "better",
+                          "smarter",
+                        ]}
+                      />
+                    </span>
                   </h1>
+                  <div>
+                    <Image
+                      src={hero}
+                      alt="hero"
+                      width={1000}
+                      height={1000}
+                      className="rounded-2xl shadow-lg"
+                    />
+                  </div>
                 </div>
                 <p className="max-w-xl text-balance text-left text-base tracking-tight text-black dark:text-white md:text-center md:text-lg">
                   We create seamless websites that make your business visible to
@@ -107,6 +123,56 @@ export default function Hero() {
                   "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
               }}
             ></div>
+          </div>
+        </div>
+      </motion.div> */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="w-full py-28 lg:py-40 px-4"
+      >
+        <div className="">
+          <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2">
+            <div className="flex gap-4 flex-col">
+              <div>
+                <Badge variant="outline">We&apos;re live!</Badge>
+              </div>
+              <div className="flex gap-4 flex-col">
+                <h1 className="md:text-7xl lg:text-6xl sm:text-7xl text-4xl max-w-lg tracking-tighter text-left font-regular font-semibold text-balance">
+                  Make your business tech-driven and{" "}
+                  <div className="mr-2"></div>
+                  <span className="inline-flex gap-2 tracking-tighter">
+                    10x more
+                    <WordRotate
+                      className="text-blue-600 dark:text-blue-500 relative text-left tracking-tighter text-balance font-semibold md:text-7xl pb-3 lg:text-6xl sm:text-7xl text-4xl"
+                      words={["faster", "better"]}
+                    />
+                  </span>
+                </h1>
+                <p className="text-md sm:text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
+                  Digital transformation can be tough. We make it simple,
+                  helping your business grow and become efficient.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  className="inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-b from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 rounded-xl text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 dark:bg-white dark:text-white hover:ring-blue-500 hover:ring-offset-2 hover:dark:ring-offset-zinc-900 dark:hover:ring-blue-500"
+                  href="/pricing"
+                >
+                  See pricing
+                  <RightArrow />
+                </Link>
+                <Link
+                  className="inline-flex items-center justify-center bg-white dark:bg-[#121212] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 px-8 whitespace-pre md:flex group relative w-full gap-1 overflow-hidden rounded-xl text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 text-blue-700 dark:text-white hover:ring-blue-500 hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-white dark:hover:ring-offset-black"
+                  href="/projects"
+                >
+                  Browse Projects
+                  <RightArrow />
+                </Link>
+              </div>
+            </div>
+            <div className="bg-neutral-200 rounded-md aspect-square"></div>
           </div>
         </div>
       </motion.div>
