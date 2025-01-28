@@ -34,39 +34,39 @@ export default function Navbar() {
           href: "/web-sites",
         },
         {
-          title: "Applications",
-          href: "/web-applications",
-        },
-        {
           title: "Systems",
           href: "/web-systems",
         },
-      ],
-    },
-    {
-      title: "Products",
-      description: "Managing a small business today is already tough.",
-      items: [
         {
-          title: "Web Builder",
-          href: "/web-builder",
-        },
-        {
-          title: "Blog Builder",
-          href: "/blog-builder",
-        },
-        {
-          title: "Content Management",
-          href: "/cms",
-        },
-        {
-          title: "Shopify Store",
-          href: "/shopify-store",
+          title: "eCommrece",
+          href: "/web-ecommerce",
         },
       ],
     },
+    // {
+    //   title: "Products",
+    //   description: "Managing a small business today is already tough.",
+    //   items: [
+    //     {
+    //       title: "Web Builder",
+    //       href: "/web-builder",
+    //     },
+    //     {
+    //       title: "Blog Builder",
+    //       href: "/blog-builder",
+    //     },
+    //     {
+    //       title: "Content Management",
+    //       href: "/cms",
+    //     },
+    //     {
+    //       title: "Shopify Store",
+    //       href: "/shopify-store",
+    //     },
+    //   ],
+    // },
     {
-      title: "Projects",
+      title: "Clients",
       href: "/projects",
       description: "",
     },
@@ -89,10 +89,14 @@ export default function Navbar() {
 
   const [isOpen, setOpen] = useState(false);
   return (
-    <header className="w-full z-40 fixed top-0 left-0 bg-white dark:bg-[#121212] shadow-md dark:shadow-lg">
+    <header className="w-full fixed top-0 left-0 bg-white dark:shadow-lg bg-white/80 dark:bg-[#121212]/50 text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
       <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
         <div className="flex lg:justify-center">
-          <p className="font-semibold">Algotrimo</p>
+          <Link href="/">
+            <h3 className="text-2xl font-bold text-black dark:text-white">
+              Algotrimo
+            </h3>
+          </Link>
         </div>
         <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
           <NavigationMenu className="flex justify-start items-start">
@@ -107,7 +111,7 @@ export default function Navbar() {
                     </>
                   ) : (
                     <>
-                      <NavigationMenuTrigger className="font-medium text-sm bg-transparent">
+                      <NavigationMenuTrigger className="font-medium text-sm !bg-transparent hover:!bg-zinc-100 focus:!bg-zinc-100 dark:!bg-transparent dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800 data-[state=open]:!bg-zinc-100 dark:data-[state=open]:!bg-zinc-800 data-[active]:!bg-zinc-100">
                         {item.title}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className="!w-[450px] p-4">
@@ -119,16 +123,18 @@ export default function Navbar() {
                                 {item.description}
                               </p>
                             </div>
-                            <Button size="sm" className="mt-10">
-                              Book a call today
-                            </Button>
+                            <Link href="/contact">
+                              <Button size="sm" className="mt-10">
+                                Book a call today
+                              </Button>
+                            </Link>
                           </div>
                           <div className="flex flex-col text-sm h-full justify-end">
                             {item.items?.map((subItem) => (
                               <NavigationMenuLink
                                 href={subItem.href}
                                 key={subItem.title}
-                                className="flex flex-row justify-between items-center hover:bg-muted py-2 px-4 rounded"
+                                className="flex flex-row justify-between items-center hover:bg-muted py-2 px-4"
                               >
                                 <span>{subItem.title}</span>
                                 <MoveRight className="w-4 h-4 text-muted-foreground" />
@@ -192,86 +198,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-// "use client";
-
-// import PrimaryLogo from "@/components/ui/logo";
-// import Link from "next/link";
-// import ThemeSwitch from "./ui/theme-switcher";
-// import { motion } from "framer-motion";
-
-// export default function Navbar() {
-//   return (
-//     <motion.nav
-//       initial={{ opacity: 0, y: -20 }}
-//       animate={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.6, delay: 0.2 }}
-//       className="fixed left-0 top-0 w-full z-[1000] bg-white dark:bg-[#121212] shadow-md dark:shadow-lg"
-//     >
-//       <div className="fixed left-[50%] top-4 md:top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg bg-white/80 dark:bg-[#121212]/80 p-2 pl-4 text-sm text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
-//         <Link
-//           href="/"
-//           className="block overflow-hidden text-black hover:text-white hover:stroke-black dark:text-white dark:hover:text-black dark:hover:stroke-white  transition-all duration-300 py-1.5"
-//         >
-//           <PrimaryLogo />
-//         </Link>
-//         <Link
-//           href="/projects"
-//           className="block overflow-hidden text-zinc-500 hover:text-black dark:text-neutral-50/60 dark:hover:text-white transition-all duration-300"
-//         >
-//           <div className="h-[20px]">
-//             <span className="flex h-[20px] items-center">Projects</span>
-//             <span className="flex h-[20px] items-center text-neutral-50/60 ">
-//               Projects
-//             </span>
-//           </div>
-//         </Link>
-//         <Link
-//           href="/pricing"
-//           className="block overflow-hidden text-zinc-500 hover:text-black dark:text-neutral-50/60 dark:hover:text-white transition-all duration-300"
-//         >
-//           <div className="h-[20px]">
-//             <span className="flex h-[20px] items-center">Pricing</span>
-//             <span className="flex h-[20px] items-center text-neutral-50/60 ">
-//               Pricing
-//             </span>
-//           </div>
-//         </Link>
-//         <Link
-//           href="/contact"
-//           className="block overflow-hidden text-zinc-500 hover:text-black dark:text-neutral-50/60 dark:hover:text-white transition-all duration-300"
-//         >
-//           <div className="h-[20px]">
-//             <span className="flex h-[20px] items-center">Contact</span>
-//             <span className="flex h-[20px] items-center text-neutral-50/60 ">
-//               Contact
-//             </span>
-//           </div>
-//         </Link>
-//         {/* <Link
-//           href="#contact"
-//           className='
-//           relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border-[1px]
-//           dark:border-neutral-700 px-4 py-1.5 font-medium
-//          text-black dark:text-neutral-300 transition-all duration-300 bg-white dark:bg-[#121212]
-
-//           before:absolute before:inset-0
-//           before:-z-10 before:translate-y-[200%]
-//           before:scale-[2.5]
-//           before:rounded-[100%] before:bg-black dark:before:bg-neutral-50
-//           before:transition-transform before:duration-1000
-//           before:content-[""]
-
-//           hover:scale-105hover:border-black dark:hover:border-neutral-50 hover:text-white dark:hover:text-neutral-900
-//           hover:before:translate-y-[0%]
-//           active:scale-100'
-//         >
-//           Call us
-//         </Link> */}
-//         <ThemeSwitch />
-//         <div className="-z-40 absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]"></div>
-//         <div className="-z-40 absolute inset-0 block size-full animate-gradient bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-px ![mask-composite:subtract]"></div>
-//       </div>
-//     </motion.nav>
-//   );
-// }
