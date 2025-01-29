@@ -142,9 +142,10 @@ export const AnimatedTestimonials = ({
                     ease: "easeInOut",
                     delay: 0.02 * index,
                   }}
-                  className="inline-block"
+                  className="inline-block text-wrap"
                 >
-                  {word}&nbsp;
+                  {word}
+                  {word === " " ? "\u00A0" : ""}
                 </motion.span>
               ))}
             </motion.p>

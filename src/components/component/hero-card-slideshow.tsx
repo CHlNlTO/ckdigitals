@@ -11,8 +11,11 @@ import chef from "@/assets/chef.png";
 import cityChapels from "@/assets/city-chapels.png";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { motion } from "framer-motion";
+import ClientCard from "../ClientCard";
+import { items } from "../ClientSlideshow";
+import FadeIn from "./fade-in";
 
-const items = [
+const itemsHere = [
   {
     title: "Snapfolia",
     description:
@@ -118,18 +121,23 @@ export default function HeroCardSlideShow() {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
-      <div className="flex flex-col items-center justify-center max-w-3xl mx-auto px-4 py-8">
-        <div className="mb-2 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
-          Showcase
+      <FadeIn duration={0}>
+        <div className="flex flex-col items-center justify-center max-w-3xl mx-auto px-4 py-8">
+          <div className="mb-2 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
+            Showcase
+          </div>
+          <div className="max-w-xl text-balance text-center text-base tracking-tight text-black dark:text-white md:text-center md:text-lg">
+            Companies choose Algotrimo to build their profile websites and
+            internal systems.
+          </div>
         </div>
-        <div className="max-w-xl text-balance text-center text-base tracking-tight text-black dark:text-white md:text-center md:text-lg">
-          Companies choose Algotrimo to build their profile websites and
-          internal systems.
+      </FadeIn>
+      <FadeIn duration={0}>
+        <div className="rounded-xl flex flex-col antialiased bg-transparent dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden max-w-full p-4">
+          {/* <InfiniteMovingCards items={items} direction="left" speed="slow" /> */}
+          <ClientCard items={items} />
         </div>
-      </div>
-      <div className="h-[30rem] rounded-xl flex flex-col antialiased bg-transparent dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden max-w-full">
-        <InfiniteMovingCards items={items} direction="left" speed="slow" />
-      </div>
+      </FadeIn>
     </motion.div>
   );
 }

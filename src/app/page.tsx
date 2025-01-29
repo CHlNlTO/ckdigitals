@@ -7,6 +7,7 @@ import { FAQs } from "@/components/FAQ";
 import ServiceGrid from "@/components/ServiceGrid";
 import { Testimonials } from "@/components/Testimonials";
 import Hero from "@/components/ui/hero";
+import ValueProposition from "@/components/ValueProposition";
 
 export default function Home() {
   return (
@@ -25,10 +26,10 @@ export default function Home() {
         <ServiceGrid />
       </section>
       <section
-        id="introduction"
-        className="flex flex-col justify-center items-center transition-all duration-300 w-full mb-48 dark:bg-white bg-[#121212]"
+        id="value-proposition"
+        className="flex flex-col justify-center items-center mb-20 transition-all duration-300 w-full bg-gradient-to-tr from-transparent via-transparent to-blue-500 dark:to-blue-950"
       >
-        <HeroCardSlideShow />
+        <ValueProposition />
       </section>
       <section
         id="projects"
@@ -40,17 +41,17 @@ export default function Home() {
         <CTASection />
       </section>
       <section
-        id="comparison"
-        className="flex flex-row justify-center items-center w-full mb-48"
-      >
-        <Comparison />
-      </section>
-      <section
         id="tetimonials"
         className="flex flex-row justify-center items-center w-full mb-48"
       >
         <Testimonials />
       </section>
+      {/* <section
+        id="comparison"
+        className="flex flex-row justify-center items-center w-full mb-48"
+      >
+        <Comparison />
+      </section> */}
       <section
         id="faqs"
         className="flex flex-row justify-center items-center w-full mb-36"

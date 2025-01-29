@@ -4,13 +4,6 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-
-interface StaticImageData {
-  src: string;
-  height: number;
-  width: number;
-}
 
 export const ClientSlideshowCards = ({
   items,
@@ -22,6 +15,7 @@ export const ClientSlideshowCards = ({
   items: {
     title: string;
     description: string;
+    logo: string;
     image: string;
     link: string;
   }[];
@@ -102,7 +96,7 @@ export const ClientSlideshowCards = ({
           <Link href={item.link} target="__blank" key={idx}>
             <Image
               alt={item.description}
-              src={item.image}
+              src={item.logo}
               width={1500}
               height={1500}
               className="h-14 md:h-20 w-auto object-contain rounded-2xl"
