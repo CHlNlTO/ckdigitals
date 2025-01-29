@@ -20,9 +20,15 @@ export default function Home() {
       </section>
       <section
         id="services"
-        className="flex flex-col justify-center items-center transition-all duration-300 w-full mb-48"
+        className="flex flex-col justify-center items-center transition-all duration-300 w-full"
       >
         <ServiceGrid />
+      </section>
+      <section
+        id="introduction"
+        className="flex flex-col justify-center items-center transition-all duration-300 w-full mb-48 dark:bg-white bg-[#121212]"
+      >
+        <HeroCardSlideShow />
       </section>
       <section
         id="projects"

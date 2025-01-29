@@ -9,28 +9,28 @@ const services = [
   {
     title: "Web Design",
     description:
-      "Craft cutting-edge, immersive user interfaces that push the boundaries of digital experiences.",
+      "Design stunning, user-friendly websites with a focus on user experience and conversion.",
     icon: Palette,
     link: "/web-design",
   },
   {
     title: "Websites",
     description:
-      "Develop lightning-fast, next-gen websites optimized for the future of the internet.",
+      "Build lightning-fast, next-gen websites optimized for the future of the internet.",
     icon: Globe,
     link: "/web-sites",
   },
   {
     title: "Internal Systems",
     description:
-      "Engineer advanced, AI-driven internal systems to revolutionize business operations.",
+      "Develop custom internal systems that streamline your business processes.",
     icon: Database,
     link: "/web-systems",
   },
   {
     title: "E-commerce",
     description:
-      "Build state-of-the-art online marketplaces with blockchain integration and AR product previews.",
+      "Create high-converting, secure e-commerce platforms that drive sales and revenue.",
     icon: ShoppingCart,
     link: "/web-ecommerce",
   },
@@ -38,7 +38,7 @@ const services = [
 
 export default function ServiceGrid() {
   return (
-    <section className="py-24 bg-gradient-to-br from-transparent via-transparent to-blue-500 dark:to-blue-950 text-white overflow-hidden w-full">
+    <section className="pt-24 pb-72 bg-gradient-to-br from-transparent via-transparent to-blue-500 dark:to-blue-950 text-white overflow-hidden w-full">
       <div className="container mx-auto px-4 text-black dark:text-white">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -61,22 +61,26 @@ export default function ServiceGrid() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="flex flex-col gap-2 items-start justify-start bg-white dark:bg-transparent dark:backdrop-filter dark:backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300"
+              className="w-full h-full bg-gradient-to-br from-green-400 to-blue-600 rounded-[20px] transition-all duration-300"
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
-              <div className="flex items-center justify-center w-16 h-16 bg-blue-600 bg-opacity-20 rounded-full mb-6 group-hover:bg-opacity-30 transition-all duration-300">
-                <service.icon className="w-8 h-8 text-blue-400" />
-              </div>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-700 dark:text-blue-300">
-                {service.title}
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300">
-                {service.description}
-              </p>
-              <div className="flex flex-col items-end justify-end">
+              <div className="w-full h-full bg-neutral-100 dark:bg-[#1a1a1a] rounded-lg transition-all duration-200 hover:scale-95 hover:rounded-[20px] p-6 flex flex-col justify-between gap-10 border border-blue-200 dark:border-neutral-800 hover:border-none">
+                <div>
+                  <div className="flex flex-col items-start justify-start gap-4">
+                    <div className="flex items-center justify-center w-16 h-16 bg-blue-600 bg-opacity-20 rounded-full group-hover:bg-opacity-30 transition-all duration-300">
+                      <service.icon className="w-8 h-8 text-blue-400" />
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    {service.description}
+                  </p>
+                </div>
                 <Link href={service.link}>
                   <PrimaryButton>Learn More</PrimaryButton>
                 </Link>
