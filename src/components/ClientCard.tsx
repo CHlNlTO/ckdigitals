@@ -56,7 +56,7 @@ export default function ClientCard({ items }: { items: ClientCardProps[] }) {
                 </p>
               </div>
               <div className="mt-auto text-center">
-                <Link href={item.link!}>
+                <Link href={item.link!} target="_blank">
                   <PrimaryButton>Visit</PrimaryButton>
                 </Link>
               </div>
