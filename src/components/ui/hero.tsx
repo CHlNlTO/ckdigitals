@@ -52,7 +52,7 @@ export default function Hero() {
             <div className="flex gap-4 flex-col">
               <div className="mb-2">
                 <Link href="/pricing">
-                  <Badge className="group relative bg-transparent dark:bg-transparent hover:bg-blue-5 dark:hover:bg-zinc-950/50 text-black dark:text-white border border-blue-500/50 dark:border-neutral-600 px-3 py-1.5 md:px-4 md:py-2 shadow-[0_0_15px_rgba(59,130,246,0.1)] transition-all hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] backdrop-blur-sm">
+                  <Badge className="group relative bg-transparent dark:bg-transparent hover:bg-blue-5 dark:hover:bg-zinc-950/50 text-black dark:text-white border border-blue-500/50 dark:border-blue-600 px-3 py-1.5 md:px-4 md:py-2 shadow-[0_0_15px_rgba(59,130,246,0.1)] transition-all hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] backdrop-blur-sm">
                     <span className="relative z-10 font-medium flex flex-row justify-center items-center">
                       <span className="mr-2 inline-block animate-[bounce_2s_infinite]">
                         🎉
@@ -114,13 +114,16 @@ export default function Hero() {
                 </Link>
               </div>
             </div>
-            <Image
-              src="/hero.jpg"
-              className="bg-neutral-200 rounded-md aspect-square"
-              height={1000}
-              width={1000}
-              alt="Hero"
-            />
+            <div className="relative">
+              <div className="block sm:hidden absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[75%] mx-auto h-24 lg:h-80 bg-blue-700/80 rounded-full blur-3xl -z-10"></div>
+              <Image
+                src="/hero.jpg"
+                className="bg-neutral-200 rounded-md aspect-square border-blue-700/80 dark:border-blue-700 border-t-2 sm:border-none"
+                height={1000}
+                width={1000}
+                alt="Hero"
+              />
+            </div>
           </div>
         </div>
       </motion.div>

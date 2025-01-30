@@ -27,13 +27,13 @@ export default function Home() {
       </section>
       <section
         id="value-proposition"
-        className="flex flex-col justify-center items-center mb-20 transition-all duration-300 w-full bg-gradient-to-tr from-transparent via-transparent to-blue-500 dark:to-blue-950"
+        className="flex flex-col justify-center items-center mb-20 transition-all duration-300 w-full"
       >
         <ValueProposition />
       </section>
       <section
         id="projects"
-        className="flex flex-col justify-center items-center transition-all duration-300 w-full mb-48"
+        className="flex flex-col justify-center items-center transition-all duration-300 w-full mb-16"
       >
         <HeroCardSlideShow />
       </section>
@@ -42,7 +42,7 @@ export default function Home() {
       </section>
       <section
         id="tetimonials"
-        className="flex flex-row justify-center items-center w-full mb-48"
+        className="flex flex-row justify-center items-center w-full mb-16"
       >
         <Testimonials />
       </section>

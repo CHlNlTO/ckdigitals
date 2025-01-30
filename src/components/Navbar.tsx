@@ -89,7 +89,7 @@ export default function Navbar() {
 
   const [isOpen, setOpen] = useState(false);
   return (
-    <header className="w-full fixed top-0 left-0 bg-white dark:shadow-lg bg-white/80 dark:bg-[#121212]/50 text-black dark:text-neutral-50/60 z-50 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
+    <header className="w-full fixed top-0 left-0 z-[1000] bg-white dark:shadow-lg bg-white/80 dark:bg-[#121212]/50 text-black dark:text-neutral-50/60 shadow-[inset_0_-8px_10px_#8fdfff1f] backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
       <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
         <div className="flex lg:justify-center">
           <Link href="/">

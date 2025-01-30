@@ -39,7 +39,7 @@ const services = [
 
 export default function ServiceGrid() {
   return (
-    <section className="pt-24 pb-10 md:pb-32 bg-gradient-to-br from-transparent via-transparent to-blue-500 dark:to-blue-950 text-white overflow-hidden w-full">
+    <section className="pt-24 pb-10 md:pb-32 text-white overflow-hidden w-full">
       <div className="container mx-auto px-4 text-black dark:text-white">
         <FadeIn duration={0}>
           <motion.h2

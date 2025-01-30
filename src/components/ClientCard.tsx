@@ -15,7 +15,7 @@ interface ClientCardProps {
 
 export default function ClientCard({ items }: { items: ClientCardProps[] }) {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 w-full h-full place-items-center">
+    <div className="grid grid-cols-1 gap-16 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3 w-full h-full place-items-center">
       {items.map((item, idx) => (
         <div
           className="w-64 h-full rounded-2xl bg-white dark:bg-black shadow-lg border border-neutral-300 dark:border-neutral-800/90 hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out"
