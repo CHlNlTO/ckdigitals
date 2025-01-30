@@ -54,7 +54,7 @@ export default function ValueProposition() {
               <Card
                 key={index}
                 icon={
-                  <prop.icon className="w-8 h-8 text-black dark:text-white" />
+                  <prop.icon className="w-8 h-8 text-blue-500 dark:text-blue-200" />
                 }
                 title={prop.title}
                 description={prop.description}
@@ -77,14 +77,14 @@ function Card({
   description: string;
 }) {
   return (
-    <div className="bg-gradient-to-tr from-white via-neutral-50 to-neutral-200 dark:from-blue-800 dark:via-blue-900 dark:to-blue-950 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out p-8 border border-blue-100 dark:border-blue-900 flex flex-col items-start text-left group hover:-translate-y-2">
+    <div className="bg-gradient-to-tr from-blue-200 via-white to-blue-300 dark:from-blue-800 dark:via-blue-700 dark:to-blue-950 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out p-8 border border-blue-100 dark:border-blue-900 flex flex-col items-start text-left group hover:-translate-y-2">
       <div className="mb-6 transform transition-transform duration-300 ease-in-out group-hover:scale-110">
         {icon}
       </div>
       <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">
         {title}
       </h2>
-      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+      <p className="text-gray-600 dark:text-gray-100 leading-relaxed">
         {description}
       </p>
     </div>

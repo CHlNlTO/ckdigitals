@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PrimaryButton } from "./component/PrimaryButton";
+import { ArrowUpRight } from "lucide-react";
 
 interface ClientCardProps {
   title?: string;
@@ -57,7 +58,9 @@ export default function ClientCard({ items }: { items: ClientCardProps[] }) {
               </div>
               <div className="mt-auto text-center">
                 <Link href={item.link!} target="_blank">
-                  <PrimaryButton>Visit</PrimaryButton>
+                  <PrimaryButton>
+                    Visit <ArrowUpRight className="w-4 h-4" />
+                  </PrimaryButton>
                 </Link>
               </div>
             </div>
