@@ -60,7 +60,7 @@ export default function Home() {
       </section>
       <section
         id="contact"
-        className="flex flex-row justify-center items-center w-full"
+        className="flex flex-row justify-center items-center max-w-4xl mx-auto w-full"
       >
         <ContactForm />
       </section>

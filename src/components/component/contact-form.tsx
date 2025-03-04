@@ -67,7 +67,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="max-w-2xl w-full mx-4 md:mx-auto rounded-xl sm:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-[#121212] border">
+    <div className="w-full mx-4 md:mx-auto rounded-xl sm:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-[#121212] border">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Contact Us
       </h2>

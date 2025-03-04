@@ -54,28 +54,28 @@ export default function PackageDetails({
       <nav className="text-sm text-gray-500 mb-8">
         <Link
           href="/pricing"
-          className="text-blue-600 dark:text-blue-500 hover:underline font-medium"
+          className="text-black dark:text-blue-500 hover:underline font-medium"
         >
           Pricing
         </Link>{" "}
         /{" "}
         <Link
           href={`/pricing/${category}`}
-          className="text-blue-600 dark:text-blue-500 hover:underline font-medium"
+          className="text-black dark:text-blue-500 hover:underline font-medium"
         >
           {selectedCategory.category}
         </Link>{" "}
         /{" "}
-        <span className="text-blue-950 dark:text-gray-200 hover:underline font-medium cursor-pointer">
+        <span className="text-black dark:text-gray-200 hover:underline font-medium cursor-pointer">
           {name}
         </span>
       </nav>
 
       {/* Image Slideshow */}
-      <PackageSlideshow />
+      {/* <PackageSlideshow /> */}
 
       {/* Header Section */}
-      <div className="p-1 sm:p-4 md:p-4 mb-10 rounded-3xl bg-gray-200 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
+      <div className="p-1 sm:p-4 md:p-4 mb-10 rounded-3xl bg-gray-200 dark:bg-neutral-900 border border-gray-300 dark:border-neutral-800 shadow-input w-full shadow-[0px_-1px_0px_0px_var(--neutral-400)] dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
         <div className="p-4 bg-white dark:bg-neutral-800 rounded-2xl shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
           <div className="flex flex-row items-center justify-between">
             <h1 className="text-md sm:text-3xl lg:text-4xl font-bold text-black dark:text-white">
@@ -103,8 +103,8 @@ export default function PackageDetails({
       </div>
 
       {/* Features Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 p-1 sm:p-4 md:p-4 rounded-3xl bg-gray-200 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
-        <div className="p-4 bg-white dark:bg-neutral-800 rounded-2xl shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 p-1 sm:p-4 md:p-4 rounded-3xl bg-gray-200 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-input w-full shadow-[0px_-1px_0px_0px_var(--neutral-400)] dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
+        <div className="p-4 bg-white dark:bg-neutral-800 rounded-2xl shadow-input w-full shadow-[0px_-1px_0px_0px_var(--neutral-400)] dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
           <h2 className="text-2xl font-semibold text-dark dark:text-white mb-4">
             What’s Included
           </h2>
@@ -133,7 +133,7 @@ export default function PackageDetails({
 
         {/* Exclusions Section */}
         {excludedFeatures && (
-          <div className="p-4 bg-white dark:bg-neutral-800 rounded-2xl shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
+          <div className="p-4 bg-white dark:bg-neutral-800 rounded-2xl shadow-input w-full shadow-[0px_-1px_0px_0px_var(--neutral-400)] dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
             <h2 className="text-2xl font-semibold text-black dark:text-white mb-4">
               What’s Not Included
             </h2>
@@ -153,7 +153,7 @@ export default function PackageDetails({
       </div>
 
       {/* Inquiry Section */}
-      <div className="p-1 sm:p-4 md:p-4 mb-10 rounded-3xl bg-gray-200 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
+      <div className="p-1 sm:p-4 md:p-4 mb-10 rounded-3xl bg-gray-200 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-input w-full shadow-[0px_-1px_0px_0px_var(--neutral-400)] dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
         <div className="p-4 bg-white dark:bg-neutral-800 rounded-2xl shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]">
           <h2 className="text-2xl font-semibold text-black dark:text-white">
             Interested in this package?

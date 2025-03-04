@@ -5,7 +5,7 @@ import ThemeSwitch from "./ui/theme-switcher";
 
 const footerConfig = {
   companyInfo: {
-    name: "Algotrimo",
+    name: "CK Digitals",
     address: {
       line1: "Block 7 Lot 15 Tamarind Village",
       line2: "San Roque, Santo Tomas, Batangas",
@@ -43,7 +43,7 @@ const footerConfig = {
       {
         name: "Facebook",
         icon: Facebook,
-        href: "https://www.facebook.com/itswaynetoomuch",
+        href: "https://www.facebook.com/ckdigitalss",
       },
       {
         name: "Instagram",
