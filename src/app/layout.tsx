@@ -12,8 +12,9 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Algotrimo",
-  description: "A modern website services company",
+  title: "CK Digitals",
+  description:
+    "We build engaging websites that convert visitors into curious clients eager to connect with you.",
 };
 
 export const viewport: Viewport = {
